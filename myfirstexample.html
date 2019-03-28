@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My First Angular JS Application</title>
+	</head>
+
+	<body ng-app = "myapp">
+		<div ng-controller = "HelloController">
+			<h2>Welcome {{ helloTo.title }} to the world of Tutorialspoint!</h2>
+		</div>
+
+		<script src="js/angular.min.js"></script>
+		<script>
+			angular.module("myapp", [])
+
+			.controller("HelloController", function($scope){
+				$scope.helloTo = {};
+				$scope.helloTo.title = "AngularJS";
+			});
+		</script>
+	</body>
+</html>
